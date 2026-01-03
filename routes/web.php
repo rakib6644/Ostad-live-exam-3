@@ -13,6 +13,7 @@ Route::get('/info', function (Request $request) {
     $email = $request->query('email');
 
     Session::put('name', $name);
+    Session::put('email', $email);
 
     // session(['name' => $name, 'email' => $email]);
     Log::info("Name: {$name} and email: {$email}");
